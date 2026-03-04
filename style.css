@@ -1,0 +1,27 @@
+.set_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1920px;
+    height: 64px;
+}
+
+.firstblock{
+    width: 1920px;
+    height: 1080px;
+    background: url("img/background 1.png");
+    margin: 0 0;
+}
+
+.navigation{
+    font-family: 'Gros Ventre';
+    font-style: Light;
+    color: #5122c6;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation:hover{
+    color:#EF5614
+}
+
