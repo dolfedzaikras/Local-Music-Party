@@ -350,7 +350,116 @@
     </div>
   </div>
 </section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-bg">
+    <img src="img/contact-bg.png" alt="" class="contact-bg-image">
+    <div class="contact-overlay"></div>
+  </div>
+
+  <div class="container contact-container">
+    <h2 class="contact-main-title">Обратная связь</h2>
+
+    <div class="contact-card">
+      <div class="contact-left">
+        <div class="contact-info-block">
+          <h3 class="contact-title">Отправьте Нам сообщение</h3>
+          <p class="contact-text">
+            Нам важно Ваше мнение,<br>
+            так что поделитесь им с нами, чтобы мы<br>
+            становились лучше с каждым обновлением
+          </p>
+        </div>
+
+        <div class="contact-social-block">
+          <h3 class="contact-subtitle">Другой способ связи</h3>
+          <p class="contact-text contact-text-small">
+            Вы также можете написать нам в личные<br>
+            сообщения в наших социальных сетях
+          </p>
+
+          <div class="contact-socials">
+            <a href="#" class="contact-social-link">
+              <img src="img/vk.png" alt="VK">
+            </a>
+            <a href="#" class="contact-social-link">
+              <img src="img/telegram.png" alt="Telegram">
+            </a>
+            <a href="#" class="contact-social-link">
+              <img src="img/youtube.png" alt="YouTube">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="contactForm">
+          <div class="contact-field">
+            <input type="text" name="name" id="name" placeholder="Имя пользователя" required>
+          </div>
+
+          <div class="contact-field">
+            <input type="email" name="email" id="email" placeholder="Электронная почта" required>
+          </div>
+
+          <div class="contact-field">
+            <textarea name="message" id="message" placeholder="Пожелания и предложения" required></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">отправить</button>
+          <p class="contact-status" id="contactStatus"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
-  <script src="script.js"></script>
+
+<footer class="footer" id="faq">
+  <div class="footer-bg">
+    <img src="img/footer.png" alt="" class="footer-bg-image">
+    <div class="footer-overlay"></div>
+  </div>
+
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-nav">
+        <h3 class="footer-title">навигация</h3>
+        <ul class="footer-menu">
+          <li><a href="#about">о приложении</a></li>
+          <li><a href="#organizers">организаторам</a></li>
+          <li><a href="#users">пользователям</a></li>
+          <li><a href="#contact">обратная связь</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-socials">
+        <h3 class="footer-title">мы в социальных сетях</h3>
+        <div class="footer-social-icons">
+          <a href="#" class="social-link">
+            <img src="img/vk.png" alt="VK">
+          </a>
+          <a href="#" class="social-link">
+            <img src="img/telegram.png" alt="Telegram">
+          </a>
+          <a href="#" class="social-link">
+            <img src="img/youtube.png" alt="YouTube">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-downloads" id="download">
+        <a href="#" class="store-link">
+          <img src="img/appstore.png" alt="App Store">
+        </a>
+        <a href="#" class="store-link">
+          <img src="img/googleplay.png" alt="Google Play">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
