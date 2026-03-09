@@ -1,27 +1,1027 @@
-.set_header{
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Light";
+  src: url("fonts/GrosVentre-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Bold";
+  src: url("fonts/GrosVentre-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Regular";
+  src: url("fonts/GrosVentre-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  background-color: #080510;
+  color: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* BASE */
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* FIRST SCREEN */
+
+.first-screen {
+  position: relative;
+  overflow: hidden;
+  background-image: url("img/background 1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  z-index: 20;
+  padding: 22px 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 62px;
+  height: auto;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.menu-link {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+  transition: color 0.25s ease;
+}
+
+.menu-link:hover {
+  color: #971ef0;
+}
+
+.download-btn {
+  margin-left: 36px;
+  padding: 10px 22px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #7f2fff 0%, #b43cff 100%);
+  color: #fff;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.download-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* INTRO */
+
+.intro {
+  position: relative;
+  padding: 24px 0 86px;
+  overflow: hidden;
+}
+
+.intro-gradient {
+  position: absolute;
+  left: 55%;
+  top: 68%;
+  transform: translate(-50%, 0%);
+  width: 1400px;
+  max-width: none;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.intro-container {
+  position: relative;
+  min-height: 920px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 4;
+  max-width: 980px;
+  width: 100%;
+  padding-bottom: 92px;
+}
+
+.store-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.store-buttons img {
+  height: 48px;
+  width: auto;
+  max-width: none;
+  transition: transform 0.3s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.05);
+}
+
+.intro-title {
+  max-width: 920px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(96px, 11vw, 190px);
+  line-height: 0.88;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #ff693d;
+  margin-bottom: 18px;
+}
+
+.intro-text {
+  max-width: 790px;
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: clamp(22px, 2vw, 34px);
+  line-height: 1.18;
+  color: #f1f1f1;
+  margin-bottom: 26px;
+}
+
+.intro-image {
+  position: absolute;
+  right: -40px;
+  bottom: -310px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.intro-image img {
+  width: 1300px;
+  max-width: none;
+  height: auto;
+}
+
+/* PHONE ANIMATION */
+
+.phone {
+  opacity: 0;
+  transform: translateY(200px) scale(0.8) rotate(10deg);
+  transition: all 1.2s cubic-bezier(.2, .65, .3, 1);
+}
+
+.phone.show {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0deg);
+}
+
+/* ABOUT APP */
+
+.about-app {
+  padding: 10px 0 70px;
+  background-color: #05010d;
+}
+
+.about-app-content {
+  max-width: 1000px;
+  margin-bottom: 70px;
+}
+
+.about-app-title {
+  font-family: "Gros Ventre Regular", Arial, sans-serif;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.15;
+  color: #a234ff;
+  margin-bottom: 28px;
+}
+
+.about-app-title span {
+  color: #ff693d;
+}
+
+.about-app-text {
+  max-width: 860px;
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #e9e9e9;
+}
+
+.about-app-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.about-app-stat {
+  padding: 28px 16px 18px 0;
+  min-height: 150px;
+}
+
+.about-app-stat:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  padding-right: 24px;
+}
+
+.about-app-stat:not(:first-child) {
+  padding-left: 16px;
+}
+
+.about-app-stat h3 {
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: clamp(28px, 2.2vw, 48px);
+  line-height: 1;
+  color: #ff693d;
+  margin-bottom: 34px;
+}
+
+.about-app-stat p {
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: clamp(16px, 1.2vw, 28px);
+  line-height: 1.15;
+  color: #f2f2f2;
+}
+
+/* FEATURES BLOCK */
+
+.features-block {
+  padding: 110px 0 80px;
+  background-color: #05010d;
+  overflow: hidden;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr 620px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.features-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.features-title {
+  margin-bottom: 14px;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #ff693d;
+}
+
+.feature-card {
+  position: relative;
+  min-height: 188px;
+  padding: 34px 24px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 16px;
+  background: rgba(8, 5, 16, 0.35);
+}
+
+.feature-icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  margin-bottom: 18px;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.15;
+  color: #971ef0;
+}
+
+.feature-card p {
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.25;
+  color: #d9d9d9;
+}
+
+.features-phones {
+  position: relative;
+  min-height: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-two,
+.phone-three {
+  position: absolute;
+  max-width: none;
+  height: auto;
+  will-change: transform;
+  transition: transform 0.08s linear;
+}
+
+.phone-two {
+  width: 1320px;
+  top: -400px;
+  left: -350px;
+  transform: rotate(8deg);
+  z-index: 2;
+  rotate: -9deg;
+}
+
+.phone-three {
+  width: 1320px;
+  bottom: -60px;
+  top: 250px;
+  left: -350px;
+  transform: rotate(-10deg);
+  z-index: 3;
+  rotate: 9deg;
+}
+
+/* LARGE DESKTOP */
+
+@media (max-width: 1400px) {
+  .intro-container {
+    min-height: 860px;
+  }
+
+  .intro-content {
+    max-width: 900px;
+    padding-bottom: 80px;
+  }
+
+  .intro-title {
+    font-size: clamp(92px, 10vw, 172px);
+  }
+
+  .intro-image {
+    right: -70px;
+    bottom: -250px;
+  }
+
+  .intro-image img {
+    width: 1450px;
+  }
+}
+
+/* DESKTOP */
+
+@media (max-width: 1200px) {
+  .menu {
+    gap: 26px;
+  }
+
+  .menu-link,
+  .download-btn {
+    font-size: 15px;
+  }
+
+  .download-btn {
+    margin-left: 24px;
+  }
+
+  .intro {
+    padding: 20px 0 70px;
+  }
+
+  .intro-gradient {
+    width: 1200px;
+  }
+
+  .intro-container {
+    min-height: 760px;
+  }
+
+  .intro-content {
+    max-width: 760px;
+    padding-bottom: 70px;
+  }
+
+  .intro-title {
+    font-size: clamp(76px, 8.8vw, 138px);
+    max-width: 720px;
+  }
+
+  .intro-text {
+    max-width: 600px;
+    font-size: clamp(20px, 1.8vw, 28px);
+  }
+
+  .intro-image {
+    right: -100px;
+    bottom: -170px;
+  }
+
+  .intro-image img {
+    width: 1180px;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr 480px 1fr;
+    gap: 24px;
+  }
+
+  .features-phones {
+    min-height: 900px;
+  }
+
+  .phone-two,
+  .phone-three {
+    width: 390px;
+  }
+
+  .phone-two {
+    left: 40px;
+  }
+
+  .phone-three {
+    left: 10px;
+  }
+
+  .feature-card h3 {
+    font-size: 21px;
+  }
+
+  .feature-card p {
+    font-size: 16px;
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 18px 0;
+  }
+
+  .logo img {
+    width: 56px;
+  }
+
+  .menu {
+    gap: 22px;
+  }
+
+  .download-btn {
+    padding: 9px 18px;
+    border-radius: 10px;
+  }
+
+  .intro {
+    padding: 20px 0 56px;
+  }
+
+  .intro-gradient {
+    width: 1000px;
+    left: 54%;
+    top: 54%;
+  }
+
+  .intro-container {
+    min-height: 680px;
+  }
+
+  .intro-content {
+    max-width: 620px;
+    padding-bottom: 40px;
+  }
+
+  .intro-title {
+    max-width: 620px;
+    font-size: clamp(70px, 8vw, 118px);
+    margin-bottom: 14px;
+  }
+
+  .intro-text {
+    max-width: 500px;
+    font-size: clamp(18px, 1.8vw, 24px);
+    margin-bottom: 22px;
+  }
+
+  .intro-image {
+    right: -110px;
+    bottom: -120px;
+  }
+
+  .intro-image img {
+    width: 980px;
+  }
+
+  .about-app {
+    padding: 90px 0 60px;
+  }
+
+  .about-app-content {
+    margin-bottom: 50px;
+  }
+
+  .about-app-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-app-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-app-stat:nth-child(1),
+  .about-app-stat:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* FEATURES TABLET */
+
+@media (max-width: 992px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features-phones {
+    order: 2;
+    min-height: 820px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .features-left {
+    order: 1;
+  }
+
+  .features-right {
+    order: 3;
+  }
+
+  .features-title {
+    margin-bottom: 8px;
+  }
+
+  .phone-two,
+  .phone-three {
+    width: 360px;
+  }
+
+  .phone-two {
+    left: 100px;
+  }
+
+  .phone-three {
+    left: 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
+  }
+
+  .download-btn {
+    margin-left: auto;
+  }
+
+  .intro {
+    padding: 28px 0 42px;
+  }
+
+  .intro-gradient {
+    width: 800px;
+    left: 50%;
+    top: 52%;
+  }
+
+  .intro-container {
+    min-height: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1920px;
-    height: 64px;
-}
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 34px;
+  }
 
-.firstblock{
-    width: 1920px;
-    height: 1080px;
-    background: url("img/background 1.png");
-    margin: 0 0;
-}
+  .intro-content {
+    max-width: 100%;
+    padding-bottom: 0;
+  }
 
-.navigation{
-    font-family: 'Gros Ventre';
-    font-style: Light;
-    color: #5122c6;
+  .store-buttons {
+    flex-wrap: wrap;
+  }
+
+  .intro-title {
+    max-width: 100%;
+    font-size: 76px;
+    line-height: 0.9;
+    margin-bottom: 18px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.22;
+    margin-bottom: 22px;
+  }
+
+  .intro-image {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    pointer-events: auto;
+  }
+
+  .intro-image img {
+    width: min(100%, 470px);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-app {
+    padding: 70px 0 50px;
+  }
+
+  .about-app-content {
+    margin-bottom: 36px;
+  }
+
+  .about-app-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-app-stat {
+    padding: 22px 0;
+    min-height: auto;
+  }
+
+  .about-app-stat:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    padding-right: 0;
+  }
+
+  .about-app-stat:not(:first-child) {
+    padding-left: 0;
+  }
+
+  .about-app-stat h3 {
+    margin-bottom: 18px;
+  }
+
+  .features-block {
+    padding: 70px 0 50px;
+  }
+
+  .features-phones {
+    min-height: 620px;
+    max-width: 320px;
+  }
+
+  .phone-two,
+  .phone-three {
+    width: 250px;
+  }
+
+  .phone-two {
+    left: 50px;
+  }
+
+  .phone-three {
+    left: 0;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 28px 20px 22px;
+  }
+
+  .feature-card h3 {
     font-size: 20px;
-    text-decoration: none;
+  }
+
+  .feature-card p {
+    font-size: 15px;
+  }
 }
 
-.navigation:hover{
-    color:#EF5614
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 16px 0;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .download-btn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .intro {
+    padding: 22px 0 36px;
+  }
+
+  .intro-gradient {
+    width: 620px;
+  }
+
+  .store-buttons img {
+    height: 42px;
+  }
+
+  .intro-title {
+    font-size: 54px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+  }
+
+  .intro-image img {
+    width: min(100%, 320px);
+  }
 }
 
+.bonus-block {
+  padding: 110px 0 90px;
+  background: #05010d;
+  overflow: hidden;
+}
+
+.bonus-container {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: center;
+}
+
+.bonus-content {
+  max-width: 1000px;
+}
+
+.bonus-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 28px;
+}
+
+.bonus-title {
+  margin-bottom: 18px;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: clamp(30px, 3vw, 32px);
+  line-height: 1.1;
+  color: #ff693d;
+}
+
+.bonus-text {
+  margin-bottom: 36px;
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.2;
+  color: #f1f1f1;
+}
+
+.bonus-card {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  max-width: 1240px;
+  min-height: 110px;
+  padding: 24px 38px;
+  padding-left: 550px;
+  border-radius: 20px;
+  background: #ff693d;
+  margin-left: -500px;
+}
+
+.bonus-percent {
+  flex-shrink: 0;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: clamp(40px, 4vw, 74px);
+  line-height: 1;
+  color: #05010d;
+}
+
+.bonus-card-text {
+  font-family: "Gros Ventre Regular", Arial, sans-serif;
+  font-size: clamp(20px, 1.6vw, 32px);
+  line-height: 1.1;
+  color: #05010d;
+}
+
+.bonus-phones {
+  position: relative;
+  min-height: 760px;
+}
+
+.bonus-phone-back,
+.bonus-phone-front {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+
+.bonus-phone-back {
+  width: 420px;
+  right: 120px;
+  top: 40px;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.bonus-phone-front {
+  width: 470px;
+  right: 0;
+  top: 20px;
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+  .bonus-container {
+    grid-template-columns: 1fr 500px;
+    gap: 24px;
+  }
+
+  .bonus-phones {
+    min-height: 660px;
+  }
+
+  .bonus-phone-back {
+    width: 340px;
+    right: 100px;
+  }
+
+  .bonus-phone-front {
+    width: 390px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bonus-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bonus-content {
+    max-width: 100%;
+  }
+
+  .bonus-phones {
+    min-height: 620px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .bonus-block {
+    padding: 70px 0 50px;
+  }
+
+  .bonus-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .bonus-text {
+    margin-bottom: 28px;
+  }
+
+  .bonus-card {
+    gap: 20px;
+    padding: 20px 22px;
+    border-radius: 16px;
+  }
+
+  .bonus-phones {
+    min-height: 500px;
+    max-width: 360px;
+  }
+
+  .bonus-phone-back {
+    width: 250px;
+    right: 80px;
+    top: 30px;
+  }
+
+  .bonus-phone-front {
+    width: 290px;
+    right: 0;
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bonus-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bonus-phones {
+    min-height: 420px;
+    max-width: 300px;
+  }
+
+  .bonus-phone-back {
+    width: 210px;
+    right: 70px;
+  }
+
+  .bonus-phone-front {
+    width: 240px;
+  }
+}

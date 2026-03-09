@@ -1,31 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Music Party</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/logo svg.svg" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Music Party</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/logo svg.svg" type="image/svg+xml">
 </head>
 <body>
-    <header>
-        <div class="set_header">
-            <nav>
-                <a class="navigation" href="index.html">о приложении</a>
-                <a class="navigation" href="index.html">для организаторов</a>
-                <a class="navigation" href="index.html">для пользователей</a>
-                <a class="navigation" href="index.html">FaQ</a>
-            </nav>
-        </div>
+
+  <div class="first-screen">
+    <header class="header">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <img src="img/logo svg.svg" alt="Логотип">
+        </a>
+
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#about" class="menu-link">о приложении</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="#organizers" class="menu-link">для организаторов</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="#users" class="menu-link">для пользователей</a>
+            </li>
+
+            <li class="menu-item">
+              <a href="#faq" class="menu-link">FaQ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#download" class="download-btn">скачать</a>
+      </div>
     </header>
 
     <main>
+      <section class="intro" id="about">
+        <img class="intro-gradient" src="img/градиент 1.png" alt="">
 
-        <div class="first_block">
-            
+        <div class="container intro-container">
+          <div class="intro-content">
+            <div class="store-buttons">
+              <img src="img/AppleApp 2.png" alt="App Store">
+              <img src="img/google 1.png" alt="Google Play">
+            </div>
 
+            <h1 class="intro-title">LOCAL MUSIC PARTY</h1>
+
+            <p class="intro-text">
+              приложение для поиска и размещения локальных
+              мероприятий по всей России
+            </p>
+
+            <img src="img/о приложении.png" alt="о приложении">
+          </div>
+
+          <div class="intro-image">
+            <img class="phone" src="img/phone 1.png" alt="Приложение Local Music Party">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section class="about-app" id="about-more">
+    <div class="container">
+      <div class="about-app-content">
+        <h2 class="about-app-title">
+          <span>Local music party</span> - это приложение про свободный<br>
+          и современный выбор локальных музыкальных мероприятий<br>
+          в вашем городе
+        </h2>
+
+        <p class="about-app-text">
+          само приложение подбирает локации исходя из ваших<br>
+          музыкальных предпочтений, места жительства, загруженности<br>
+          и настроению мероприятия.
+        </p>
+      </div>
+
+      <div class="about-app-stats">
+        <div class="about-app-stat">
+          <h3>140 000</h3>
+          <p>активных пользователей<br>каждый день</p>
         </div>
 
-    </main>    
+        <div class="about-app-stat">
+          <h3>40+</h3>
+          <p>представлено<br>городов России</p>
+        </div>
+
+        <div class="about-app-stat">
+          <h3>10 млн.</h3>
+          <p>скачиваний на всех<br>платформах за год</p>
+        </div>
+
+        <div class="about-app-stat">
+          <h3>4 000</h3>
+          <p>мероприятий прошло<br>через приложение</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-block">
+  <div class="container features-container">
+    <div class="features-side features-left">
+      <h2 class="features-title">Организаторам</h2>
+
+      <div class="feature-card">
+        <img src="img/Wallet.svg" alt="" class="feature-icon">
+        <h3>Бесплатное<br>размещение</h3>
+        <p>активных пользователей<br>каждый день</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="img/Graph.svg" alt="" class="feature-icon">
+        <h3>Аналитика данных<br>через приложение</h3>
+        <p>чтобы точно знать<br>о своем мероприятии все</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="img/User.svg" alt="" class="feature-icon">
+        <h3>Правильная<br>реклама</h3>
+        <p>ваше мероприятие<br>попадает точно в ЦА</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="img/Edit 1.svg" alt="" class="feature-icon">
+        <h3>Самостоятельное<br>редактирование</h3>
+        <p>возможность редактирования<br>публикации все время</p>
+      </div>
+    </div>
+
+    <div class="features-phones">
+      <img src="img/phone 2.png" alt="Экран приложения" class="phone-two">
+      <img src="img/phone 3.png" alt="Экран приложения" class="phone-three">
+    </div>
+
+    <div class="features-side features-right">
+      <h2 class="features-title">Пользователям</h2>
+
+      <div class="feature-card">
+        <img src="img/Filter.svg" class="feature-icon">
+        <h3>Уникальная<br>подборка</h3>
+        <p>которая основывается на ваших<br>интересах и занятости</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="img/Fire.svg" alt="" class="feature-icon">
+        <h3>Актуальная<br>информация</h3>
+        <p>из первых уст от организаторов<br>мероприятия до поддержки</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="img/Users.svg" alt="" class="feature-icon">
+        <h3>Поиск<br>единомышленников</h3>
+        <p>у каждого мероприятиям<br>есть беседы с другими фанатами</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bonus-block">
+  <div class="container bonus-container">
+    <div class="bonus-content">
+      <img src="img/Sale.svg" alt="" class="bonus-icon">
+
+      <h2 class="bonus-title">Зарабатывайте на посещениях</h2>
+
+      <p class="bonus-text">
+        Зарабатывайте на посещение ресторана и заказе доставки.
+      </p>
+
+      <div class="bonus-card">
+        <div class="bonus-percent">+10%</div>
+        <div class="bonus-card-text">
+          от каждого заказа<br>
+          на ваш счет!
+        </div>
+      </div>
+    </div>
+
+    <div class="bonus-phones">
+      <img src="img/phone 4.png" alt="Экран приложения" class="bonus-phone-back">
+      <img src="img/phone 5.png" alt="Экран приложения" class="bonus-phone-front">
+    </div>
+  </div>
+</section>
+
+  <script src="script.js"></script>
 </body>
 </html>
