@@ -406,6 +406,220 @@ ul {
   rotate: 9deg;
 }
 
+/* BONUS BLOCK */
+
+.bonus-block {
+  padding: 110px 0 90px;
+  background: #05010d;
+  overflow: hidden;
+}
+
+.bonus-container {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: center;
+}
+
+.bonus-content {
+  max-width: 1000px;
+}
+
+.bonus-icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 28px;
+}
+
+.bonus-title {
+  margin-bottom: 18px;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: clamp(30px, 3vw, 32px);
+  line-height: 1.1;
+  color: #ff693d;
+}
+
+.bonus-text {
+  margin-bottom: 36px;
+  font-family: "Gros Ventre Light", Arial, sans-serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.2;
+  color: #f1f1f1;
+}
+
+.bonus-card {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  max-width: 1240px;
+  min-height: 110px;
+  padding: 24px 38px;
+  padding-left: 550px;
+  border-radius: 20px;
+  background: #ff693d;
+  margin-left: -500px;
+}
+
+.bonus-percent {
+  flex-shrink: 0;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: clamp(40px, 4vw, 74px);
+  line-height: 1;
+  color: #05010d;
+}
+
+.bonus-card-text {
+  font-family: "Gros Ventre Regular", Arial, sans-serif;
+  font-size: clamp(20px, 1.6vw, 32px);
+  line-height: 1.1;
+  color: #05010d;
+}
+
+.bonus-phones {
+  position: relative;
+  min-height: 760px;
+}
+
+.bonus-phone-back,
+.bonus-phone-front {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+
+.bonus-phone-back {
+  width: 420px;
+  right: 120px;
+  top: 40px;
+  opacity: 0.35;
+  z-index: 1;
+}
+
+.bonus-phone-front {
+  width: 470px;
+  right: 0;
+  top: 20px;
+  z-index: 2;
+}
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+  background: #05010d;
+  border-top: 2px solid #7f2fff;
+}
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 1, 13, 0.35);
+  z-index: 1;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 5;
+  min-height: 700px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-top {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-nav,
+.footer-socials,
+.footer-downloads {
+  position: relative;
+  z-index: 6;
+}
+
+.footer-title {
+  margin-bottom: 14px;
+  font-family: "Gros Ventre Bold", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-menu a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.2;
+  transition: color 0.25s ease;
+}
+
+.footer-menu a:hover {
+  color: #971ef0;
+}
+
+.footer-socials {
+  margin-left: 40px;
+  margin-right: auto;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footer-downloads {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.store-link img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
 /* LARGE DESKTOP */
 
 @media (max-width: 1400px) {
@@ -513,6 +727,36 @@ ul {
   .feature-card p {
     font-size: 16px;
   }
+
+  .bonus-container {
+    grid-template-columns: 1fr 500px;
+    gap: 24px;
+  }
+
+  .bonus-phones {
+    min-height: 660px;
+  }
+
+  .bonus-phone-back {
+    width: 340px;
+    right: 100px;
+  }
+
+  .bonus-phone-front {
+    width: 390px;
+  }
+
+  .footer-socials {
+    margin-left: 20px;
+  }
+
+  .footer-title {
+    font-size: 22px;
+  }
+
+  .footer-menu a {
+    font-size: 18px;
+  }
 }
 
 /* TABLET */
@@ -597,7 +841,7 @@ ul {
   }
 }
 
-/* FEATURES TABLET */
+/* FEATURES + BONUS + FOOTER TABLET */
 
 @media (max-width: 992px) {
   .features-container {
@@ -634,6 +878,44 @@ ul {
 
   .phone-three {
     left: 20px;
+  }
+
+  .bonus-container {
+    grid-template-columns: 1fr;
+  }
+
+  .bonus-content {
+    max-width: 100%;
+  }
+
+  .bonus-phones {
+    min-height: 620px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    min-height: 760px;
+  }
+
+  .footer-container {
+    min-height: 760px;
+    padding-top: 36px;
+  }
+
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+
+  .footer-socials {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-downloads {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
@@ -781,6 +1063,77 @@ ul {
   .feature-card p {
     font-size: 15px;
   }
+
+  .bonus-block {
+    padding: 70px 0 50px;
+  }
+
+  .bonus-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+  }
+
+  .bonus-text {
+    margin-bottom: 28px;
+  }
+
+  .bonus-card {
+    gap: 20px;
+    padding: 20px 22px;
+    border-radius: 16px;
+  }
+
+  .bonus-phones {
+    min-height: 500px;
+    max-width: 360px;
+  }
+
+  .bonus-phone-back {
+    width: 250px;
+    right: 80px;
+    top: 30px;
+  }
+
+  .bonus-phone-front {
+    width: 290px;
+    right: 0;
+    top: 10px;
+  }
+
+  .footer {
+    min-height: 620px;
+  }
+
+  .footer-container {
+    min-height: 620px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .footer-menu a {
+    font-size: 17px;
+  }
+
+  .footer-downloads {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .store-link img {
+    height: 42px;
+  }
 }
 
 /* SMALL MOBILE */
@@ -833,182 +1186,13 @@ ul {
   .intro-image img {
     width: min(100%, 320px);
   }
-}
 
-.bonus-block {
-  padding: 110px 0 90px;
-  background: #05010d;
-  overflow: hidden;
-}
-
-.bonus-container {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 40px;
-  align-items: center;
-}
-
-.bonus-content {
-  max-width: 1000px;
-}
-
-.bonus-icon {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 28px;
-}
-
-.bonus-title {
-  margin-bottom: 18px;
-  font-family: "Gros Ventre Bold", Arial, sans-serif;
-  font-size: clamp(30px, 3vw, 32px);
-  line-height: 1.1;
-  color: #ff693d;
-}
-
-.bonus-text {
-  margin-bottom: 36px;
-  font-family: "Gros Ventre Light", Arial, sans-serif;
-  font-size: clamp(18px, 1.8vw, 24px);
-  line-height: 1.2;
-  color: #f1f1f1;
-}
-
-.bonus-card {
-  display: flex;
-  align-items: center;
-  gap: 42px;
-  max-width: 1240px;
-  min-height: 110px;
-  padding: 24px 38px;
-  padding-left: 550px;
-  border-radius: 20px;
-  background: #ff693d;
-  margin-left: -500px;
-}
-
-.bonus-percent {
-  flex-shrink: 0;
-  font-family: "Gros Ventre Bold", Arial, sans-serif;
-  font-size: clamp(40px, 4vw, 74px);
-  line-height: 1;
-  color: #05010d;
-}
-
-.bonus-card-text {
-  font-family: "Gros Ventre Regular", Arial, sans-serif;
-  font-size: clamp(20px, 1.6vw, 32px);
-  line-height: 1.1;
-  color: #05010d;
-}
-
-.bonus-phones {
-  position: relative;
-  min-height: 760px;
-}
-
-.bonus-phone-back,
-.bonus-phone-front {
-  position: absolute;
-  max-width: none;
-  height: auto;
-}
-
-.bonus-phone-back {
-  width: 420px;
-  right: 120px;
-  top: 40px;
-  opacity: 0.35;
-  z-index: 1;
-}
-
-.bonus-phone-front {
-  width: 470px;
-  right: 0;
-  top: 20px;
-  z-index: 2;
-}
-
-@media (max-width: 1200px) {
-  .bonus-container {
-    grid-template-columns: 1fr 500px;
-    gap: 24px;
-  }
-
-  .bonus-phones {
-    min-height: 660px;
-  }
-
-  .bonus-phone-back {
-    width: 340px;
-    right: 100px;
-  }
-
-  .bonus-phone-front {
-    width: 390px;
-  }
-}
-
-@media (max-width: 992px) {
-  .bonus-container {
-    grid-template-columns: 1fr;
-  }
-
-  .bonus-content {
-    max-width: 100%;
-  }
-
-  .bonus-phones {
-    min-height: 620px;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .bonus-block {
-    padding: 70px 0 50px;
-  }
-
-  .bonus-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 20px;
-  }
-
-  .bonus-text {
-    margin-bottom: 28px;
-  }
-
-  .bonus-card {
-    gap: 20px;
-    padding: 20px 22px;
-    border-radius: 16px;
-  }
-
-  .bonus-phones {
-    min-height: 500px;
-    max-width: 360px;
-  }
-
-  .bonus-phone-back {
-    width: 250px;
-    right: 80px;
-    top: 30px;
-  }
-
-  .bonus-phone-front {
-    width: 290px;
-    right: 0;
-    top: 10px;
-  }
-}
-
-@media (max-width: 480px) {
   .bonus-card {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    padding-left: 22px;
+    margin-left: 0;
   }
 
   .bonus-phones {
@@ -1023,5 +1207,30 @@ ul {
 
   .bonus-phone-front {
     width: 240px;
+  }
+
+  .footer {
+    min-height: 560px;
+  }
+
+  .footer-container {
+    min-height: 560px;
+  }
+
+  .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-menu a {
+    font-size: 16px;
+  }
+
+  .social-link img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .store-link img {
+    height: 36px;
   }
 }
