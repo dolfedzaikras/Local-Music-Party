@@ -104,3 +104,48 @@ window.addEventListener("scroll", () => {
   phoneTwo.style.transform = `translateY(${scrollY * 0.08}px) rotate(-9deg)`;
   phoneThree.style.transform = `translateY(${scrollY * -0.06}px) rotate(9deg)`;
 });
+
+ 
+const TOKEN = "8443961208:AAHmOFdNMjZRbO-SIIg0rzmLMA332o_cOvU";
+const CHAT_ID = "-5072869660";
+
+const contactForm = document.getElementById("contactForm");
+const contactStatus = document.getElementById("contactStatus");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const text =
+      "Новая заявка с сайта\n\n" +
+      "Имя: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Сообщение: " + message;
+
+    const url =
+      "https://api.telegram.org/bot" +
+      TOKEN +
+      "/sendMessage?chat_id=" +
+      CHAT_ID +
+      "&text=" +
+      encodeURIComponent(text);
+
+    fetch(url)
+      .then((response) => {
+        if (contactStatus) {
+          contactStatus.textContent = "Сообщение отправлено!";
+        }
+        contactForm.reset();
+      })
+      .catch((error) => {
+        if (contactStatus) {
+          contactStatus.textContent = "Ошибка отправки";
+        }
+        console.error(error);
+      });
+  });
+}
