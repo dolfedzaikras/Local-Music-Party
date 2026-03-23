@@ -26,7 +26,6 @@
   font-style: normal;
 }
 
-/* RESET */
 
 * {
   margin: 0;
@@ -58,7 +57,6 @@ ul {
   list-style: none;
 }
 
-/* BASE */
 
 .container {
   width: 100%;
@@ -66,8 +64,6 @@ ul {
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* FIRST SCREEN */
 
 .first-screen {
   position: relative;
@@ -77,8 +73,6 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* HEADER */
 
 .header {
   position: relative;
@@ -140,7 +134,6 @@ ul {
   transform: translateY(-1px);
 }
 
-/* INTRO */
 
 .intro {
   position: relative;
@@ -227,7 +220,6 @@ ul {
   height: auto;
 }
 
-/* PHONE ANIMATION */
 
 .phone {
   opacity: 0;
@@ -240,7 +232,6 @@ ul {
   transform: translateY(0) scale(1) rotate(0deg);
 }
 
-/* ABOUT APP */
 
 .about-app {
   padding: 10px 0 70px;
@@ -307,8 +298,6 @@ ul {
   line-height: 1.15;
   color: #f2f2f2;
 }
-
-/* FEATURES BLOCK */
 
 .features-block {
   padding: 110px 0 80px;
@@ -403,7 +392,6 @@ ul {
   z-index: 3;
 }
 
-/* LARGE DESKTOP */
 
 @media (max-width: 1400px) {
   .intro-container {
@@ -428,8 +416,6 @@ ul {
     width: 1450px;
   }
 }
-
-/* DESKTOP */
 
 @media (max-width: 1200px) {
   .menu {
@@ -473,8 +459,8 @@ ul {
   }
 
   .intro-image {
-    right: -100px;
-    bottom: -170px;
+    right: -10px;
+    bottom: -380px;
   }
 
   .intro-image img {
@@ -492,18 +478,19 @@ ul {
 
   .phone-two,
   .phone-three {
-    width: 390px;
+    width: 1090px;
   }
 
   .phone-two {
-    top: 0;
-    left: 40px;
+    margin-top: 80px;
+    margin-left: 50px;
     transform: rotate(-9deg);
   }
 
   .phone-three {
-    top: 320px;
-    left: 10px;
+    margin-top: -50px;
+    right: 50px;
+    margin-left: 50px;
     transform: rotate(9deg);
   }
 
@@ -515,8 +502,6 @@ ul {
     font-size: 16px;
   }
 }
-
-/* TABLET */
 
 @media (max-width: 1024px) {
   .header {
@@ -568,8 +553,8 @@ ul {
   }
 
   .intro-image {
-    right: -110px;
-    bottom: -120px;
+    right: -10px;
+    top: -10px;
   }
 
   .intro-image img {
@@ -596,9 +581,48 @@ ul {
   .about-app-stat:nth-child(2) {
     border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   }
-}
 
-/* FEATURES TABLET */
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .features-phones {
+    order: 2;
+    min-height: 820px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .features-left {
+    order: 1;
+  }
+
+  .features-right {
+    order: 3;
+  }
+
+  .features-title {
+    margin-bottom: 8px;
+  }
+
+  .phone-two,
+  .phone-three {
+    width: 860px;
+  }
+
+  .phone-two {
+    top: 0;
+    left: -500px;
+    transform: rotate(-9deg);
+  }
+
+  .phone-three {
+    top: 120px;
+    left: -400px;
+    transform: rotate(9deg);
+  }
+
+}
 
 @media (max-width: 992px) {
   .features-container {
@@ -626,34 +650,32 @@ ul {
 
   .phone-two,
   .phone-three {
-    width: 360px;
+    width: 860px;
   }
 
   .phone-two {
     top: 0;
-    left: 100px;
+    left: -500px;
     transform: rotate(-9deg);
   }
 
   .phone-three {
-    top: 320px;
-    left: 20px;
+    top: 120px;
+    left: -400px;
     transform: rotate(9deg);
   }
 }
 
-/* MOBILE */
-
 @media (max-width: 768px) {
   .header-container {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 12px;
   }
 
   .nav {
     order: 3;
     width: 100%;
-    margin-left: 0;
+    margin-left: -20px;
   }
 
   .menu {
@@ -664,6 +686,12 @@ ul {
 
   .download-btn {
     margin-left: auto;
+    margin-bottom: -50px;
+  }
+
+  .logo img {
+    width: 56px;
+    margin-bottom: -50px;
   }
 
   .intro {
@@ -673,7 +701,7 @@ ul {
   .intro-gradient {
     width: 800px;
     left: 50%;
-    top: 52%;
+    top: 80%;
   }
 
   .intro-container {
@@ -708,17 +736,20 @@ ul {
   }
 
   .intro-image {
-    position: static;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    pointer-events: auto;
+    pointer-events: none;
+    margin-top: -100px;
+    margin-bottom: -350px;
   }
 
   .intro-image img {
-    width: min(100%, 470px);
-    max-width: 100%;
+    width: 1820px;
+    max-width: 150%;
     height: auto;
+    margin-right: 560px;
   }
 
   .about-app {
@@ -763,18 +794,18 @@ ul {
 
   .phone-two,
   .phone-three {
-    width: 250px;
+    width: 650px;
   }
 
   .phone-two {
-    top: 0;
-    left: 50px;
+    top: -100px;
+    left: -250px;
     transform: rotate(-9deg);
   }
 
   .phone-three {
-    top: 250px;
-    left: 0;
+    top: 150px;
+    left: -350px;
     transform: rotate(9deg);
   }
 
@@ -792,7 +823,6 @@ ul {
   }
 }
 
-/* SMALL MOBILE */
 
 @media (max-width: 480px) {
   .container {
@@ -811,12 +841,15 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    margin-left: 20px;
+    margin-top: 50px;
   }
 
   .download-btn {
     width: 100%;
     margin-left: 0;
     text-align: center;
+    margin-top: 50px;
   }
 
   .intro {
@@ -840,7 +873,10 @@ ul {
   }
 
   .intro-image img {
-    width: min(100%, 320px);
+    min-width: 150%;
+    margin-left: 350px;
+    margin-top: 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -887,13 +923,13 @@ ul {
   display: flex;
   align-items: center;
   gap: 42px;
-  max-width: 1240px;
+  width: calc(100% + 320px);
+  max-width: none;
   min-height: 110px;
-  padding: 24px 38px;
-  padding-left: 550px;
-  border-radius: 20px;
+  padding: 24px 38px 24px 320px;
+  border-radius: 0 20px 20px 0;
   background: #ff693d;
-  margin-left: -500px;
+  margin-left: -320px;
 }
 
 .bonus-percent {
@@ -925,7 +961,7 @@ ul {
 
 .bonus-phone-back {
   width: 1020px;
-  right: -250px;
+  right: -450px;
   top: 20px;
   opacity: 0.35;
   z-index: 1;
@@ -933,7 +969,7 @@ ul {
 
 .bonus-phone-front {
   width: 1020px;
-  right: -360px;
+  right: -160px;
   top: -150px;
   z-index: 2;
 }
@@ -949,12 +985,13 @@ ul {
   }
 
   .bonus-phone-back {
-    width: 340px;
-    right: 100px;
+    width: 540px;
+    margin-right: 600px;
   }
 
   .bonus-phone-front {
-    width: 390px;
+    width: 590px;
+    margin-right: 200px;
   }
 }
 
@@ -964,15 +1001,38 @@ ul {
   }
 
   .bonus-content {
-    max-width: 100%;
+    max-width: 500%;
   }
 
   .bonus-phones {
-    min-height: 620px;
-    max-width: 520px;
-    margin: 0 auto;
+    min-height: 420px;
+    max-width: 200%;
+    margin-top: 10px;
+    margin-right: 150px;
+  }
+
+  .bonus-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 20px 24px;
+    border-radius: 16px;
+    gap: 20px;
+  }
+
+  .bonus-phone-back {
+    width: 580px;
+    right: 250px;
+    top: 10px;
+  }
+
+  .bonus-phone-front {
+    width: 600px;
+    right: 120px;
+    top: -80px;
   }
 }
+
 
 @media (max-width: 768px) {
   .bonus-block {
@@ -990,48 +1050,68 @@ ul {
   }
 
   .bonus-card {
-    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
     padding: 20px 22px;
     border-radius: 16px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   .bonus-phones {
-    min-height: 500px;
-    max-width: 360px;
+    position: relative;
+    min-height: 760px;
+    width: 100%;
+    max-width: 120%;
+    margin-top: 10px;
+    margin-bottom: -250px;
   }
 
   .bonus-phone-back {
-    width: 250px;
-    right: 80px;
-    top: 30px;
+    width: 480px;
+    right: 300px;
+    top: 70px;
+    margin-right: -250px;
   }
 
   .bonus-phone-front {
-    width: 290px;
-    right: 0;
-    top: 10px;
+    width: 500px;
+    right: 120px;
+    top: 0;
   }
 }
 
 @media (max-width: 480px) {
   .bonus-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 18px 16px;
+    border-radius: 14px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
   }
 
   .bonus-phones {
-    min-height: 420px;
-    max-width: 300px;
+    position: relative;
+    min-height: 620px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
   }
 
   .bonus-phone-back {
-    width: 210px;
+    width: 400px;
     right: 70px;
+    top: 70px;
   }
 
   .bonus-phone-front {
-    width: 240px;
+    width: 450px;
+    right: 20px;
+    top: 0;
   }
 }
 
@@ -1410,10 +1490,13 @@ ul {
 }
 
 .faq-phone {
-  width: 760px;
-  max-width: none;
+  width: 520px;
+  min-width: 100%;
   height: auto;
   transform: rotate(7deg);
+  margin-top: 50px;
+  margin-bottom: -100px;
+  margin-right: 350px;
 }
 
 @media (max-width: 1200px) {
@@ -1422,12 +1505,12 @@ ul {
   }
 
   .faq-phone-wrap {
-    right: -140px;
-    top: 20px;
+    right: 20px;
+    margin-top: -100px;
   }
 
   .faq-phone {
-    width: 620px;
+    width: 420px;
   }
 }
 
@@ -1450,6 +1533,7 @@ ul {
     max-width: 100%;
   }
 }
+
 
 @media (max-width: 768px) {
   .faq-block {
@@ -1485,7 +1569,7 @@ ul {
   }
 }
 
-/* CONTACT */
+
 
 .contact-section {
   position: relative;
@@ -1875,7 +1959,6 @@ ul {
   }
 }
 
-/* MOBILE */
 
 @media (max-width: 768px) {
   .contact-section {
@@ -1993,3 +2076,41 @@ ul {
   }
 }
 
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #971ef0, #ff693d);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+}
+
+#about {
+  scroll-margin-top: -1000px;
+}
