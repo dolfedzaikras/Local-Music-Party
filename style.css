@@ -94,6 +94,7 @@ ul {
 .logo img {
   width: 62px;
   height: auto;
+  pointer-events: none;
 }
 
 .nav {
@@ -143,7 +144,6 @@ ul {
 
 .intro-gradient {
   position: absolute;
-  left: 55%;
   top: 68%;
   transform: translate(-50%, 0%);
   width: 1400px;
@@ -195,6 +195,7 @@ ul {
   letter-spacing: 0.5px;
   color: #ff693d;
   margin-bottom: 18px;
+  margin-top: 40px;
 }
 
 .intro-text {
@@ -225,6 +226,7 @@ ul {
   opacity: 0;
   transform: translateY(200px) scale(0.8) rotate(10deg);
   transition: all 1.2s cubic-bezier(.2, .65, .3, 1);
+  pointer-events: none;
 }
 
 .phone.show {
@@ -369,11 +371,13 @@ ul {
 
 .phone-two,
 .phone-three {
+  margin-top: 100px;
   position: absolute;
   max-width: none;
   height: auto;
   will-change: transform;
   transition: transform 0.08s linear;
+  pointer-events: none;
 }
 
 .phone-two {
@@ -651,6 +655,7 @@ ul {
   .phone-two,
   .phone-three {
     width: 860px;
+    margin-top: -100px;
   }
 
   .phone-two {
@@ -924,6 +929,7 @@ ul {
 
 .bonus-content {
   max-width: 1000px;
+
 }
 
 .bonus-icon {
@@ -986,6 +992,7 @@ ul {
   position: absolute;
   max-width: none;
   height: auto;
+  pointer-events: none;
 }
 
 .bonus-phone-back {
@@ -1043,22 +1050,24 @@ ul {
   .bonus-card {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
+    margin-left: -50px;
     padding: 20px 24px;
+    padding-left: 50px;
     border-radius: 16px;
     gap: 20px;
   }
 
   .bonus-phone-back {
     width: 580px;
-    right: 250px;
+    left: 250px;
     top: 10px;
   }
 
   .bonus-phone-front {
     width: 600px;
-    right: 120px;
+    right: 10px;
     top: -80px;
+    
   }
 }
 
@@ -1081,8 +1090,9 @@ ul {
   .bonus-card {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
+    margin-left: -50px;
     padding: 20px 22px;
+    padding-left: 50px;
     border-radius: 16px;
     gap: 16px;
     flex-wrap: wrap;
@@ -1111,12 +1121,14 @@ ul {
   }
 }
 
-@media (max-width: 480px) {
+
+@media (max-width: 500px) {
   .bonus-card {
     width: 100%;
     max-width: 100%;
-    margin-left: 0;
+    margin-left: -50px;
     padding: 18px 16px;
+    padding-left: 50px;
     border-radius: 14px;
     flex-direction: column;
     align-items: flex-start;
@@ -1526,6 +1538,7 @@ ul {
   margin-top: 50px;
   margin-bottom: -100px;
   margin-right: 350px;
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
@@ -1550,7 +1563,8 @@ ul {
 
   .faq-phone-wrap {
     position: static;
-    margin-top: 30px;
+    margin-top: -100px;
+    margin-bottom: -200px;
     display: flex;
     justify-content: center;
     opacity: 0.2;
@@ -1798,7 +1812,7 @@ ul {
   border: none;
   border-radius: 4px;
   background: #f1f1f1;
-  color: #d39cff;
+  color: #7224ba;
   font-family: "Gros Ventre Regular", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
@@ -1951,6 +1965,7 @@ ul {
   width: auto;
   display: block;
   transition: transform 0.25s ease, opacity 0.25s ease;
+  pointer-events: none;
 }
 
 .store-link:hover img {
