@@ -1,6 +1,27 @@
-@font-face {
+ @font-face {
   font-family: "Bebas Neue";
   src: url("fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Light";
+  src: url("fonts/GrosVentre-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Bold";
+  src: url("fonts/GrosVentre-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gros Ventre Regular";
+  src: url("fonts/GrosVentre-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -20,12 +41,6 @@ body {
   font-family: "Gros Ventre Light", Arial, sans-serif;
   background-color: #080510;
   color: #fff;
-  overflow-x: hidden;
-}
-
-html,
-body {
-  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -78,8 +93,6 @@ ul {
 
 .logo {
   flex-shrink: 0;
-  position: relative;
-  z-index: 30;
 }
 
 .logo img {
@@ -139,7 +152,6 @@ ul {
   position: relative;
   padding: 24px 0 86px;
   overflow: hidden;
-  padding-top: 120px;
 }
 
 .intro-gradient {
@@ -148,7 +160,7 @@ ul {
   top: 68%;
   transform: translate(0%, 0%);
   width: 1400px;
-  max-width: none;
+  max-width: 100%;
   opacity: 0.9;
   pointer-events: none;
   z-index: 4;
@@ -190,7 +202,6 @@ ul {
 .intro-title {
   max-width: 920px;
   margin-top: 40px;
-  user-select: none;
   margin-bottom: 18px;
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(96px, 11vw, 190px);
@@ -214,7 +225,7 @@ ul {
   right: -40px;
   bottom: -310px;
   z-index: 1;
-  margin-top: 80px; 
+  pointer-events: none;
 }
 
 .intro-image img {
@@ -258,7 +269,7 @@ ul {
 }
 
 .about-app-title {
-  margin-top: 25px;
+  margin-bottom: 28px;
   font-family: "Gros Ventre Regular", Arial, sans-serif;
   font-size: clamp(24px, 3vw, 32px);
   line-height: 1.15;
@@ -459,7 +470,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 42px;
-  width: calc(100% + 250px);
+  width: calc(100% + 320px);
   max-width: none;
   min-height: 110px;
   padding: 24px 38px 24px 320px;
@@ -784,9 +795,8 @@ ul {
   width: 520px;
   min-width: 100%;
   height: auto;
-  margin-top: -50px;
-  margin-right: 380px;
-  margin-left: -50px;
+  margin-top: 50px;
+  margin-right: 350px;
   margin-bottom: -100px;
   transform: rotate(7deg);
   pointer-events: none;
@@ -1150,26 +1160,13 @@ ul {
   }
 
   .intro-image {
-    right: -90px;
-    bottom: -500px;
+    right: -70px;
+    bottom: -250px;
   }
 
   .intro-image img {
     width: 1450px;
   }
-
-  .bonus-phones{
-    margin-right: 50px;
-  }
-
-  .bonus-phone-back{
-    margin-right: 0px;
-  }
-
-  .faq-phone{
-    margin-left: -200px;
-  }
-
 }
 
 @media (max-width: 1200px) {
@@ -1281,13 +1278,12 @@ ul {
   }
 
   .faq-phone-wrap {
-    margin-right: 150px;
-    margin-top: -50px;
+    right: 20px;
+    margin-top: -100px;
   }
 
   .faq-phone {
-    width: 400px;
-    margin-left: -50px;
+    width: 420px;
   }
 }
 
@@ -1342,7 +1338,7 @@ ul {
 
   .intro-image {
     right: -10px;
-    top: -200px;
+    top: -10px;
   }
 
   .intro-image img {
@@ -1395,18 +1391,18 @@ ul {
 
   .phone-two,
   .phone-three {
-    width: 1060px;
+    width: 860px;
   }
 
   .phone-two {
     top: 0;
-    margin-top: -150px;
-    left: -600px;
+    margin-top: 10px;
+    left: -500px;
   }
 
   .phone-three {
-    top: -30px;
-    left: -500px;
+    top: 120px;
+    left: -400px;
   }
 
   .events-slider-block {
@@ -1447,11 +1443,9 @@ ul {
   }
 
   .faq-phone {
-    width: min(420px, 100%);
+    width: 420px;
     max-width: 100%;
-    min-width: 0;
     transform: rotate(0deg);
-    margin: 0;
   }
 
   .contact-section {
@@ -1495,23 +1489,19 @@ ul {
 }
 
 @media (max-width: 992px) {
-  .intro-image{
-    top: -190px;
-  }
-  
   .phone-two,
   .phone-three {
-    width: 1060px;
+    width: 860px;
     margin-top: -100px;
   }
 
   .phone-two {
-    top: -30px;
-    left: -600px;
+    top: 0;
+    left: -500px;
   }
 
   .phone-three {
-    top: 10px;
+    top: 120px;
     left: -400px;
   }
 
@@ -1542,17 +1532,13 @@ ul {
   .bonus-phone-back {
     width: 580px;
     left: 250px;
-    top: -100px;
+    top: 10px;
   }
 
   .bonus-phone-front {
     width: 600px;
     right: 10px;
-    top: -180px;
-  }
-
-  .faq-phone{
-    margin-left: 60px;
+    top: 0;
   }
 }
 
@@ -1563,39 +1549,22 @@ ul {
     display: flex;
     justify-content: center;
     pointer-events: none;
-    margin-bottom: -380px;
+    margin-top: -200px;
+    margin-bottom: -150px;
   }
 
   .intro-image img {
     width: 1820px;
-    max-width: 170%;
+    max-width: 150%;
     height: auto;
-    margin-right: 350px;
+    margin-right: 300px;
   }
-
-  .bonus-phones {
-    position: relative;
-    min-height: 760px;
-    width: 100%;
-    max-width: 120%;
-    margin-top: 50px;
-    margin-bottom: -250px;
-  }
-
 }
 
 @media (max-width: 768px) {
   .header-container {
     flex-wrap: wrap;
     gap: 12px;
-    align-items: center;
-  }
-
-  .header,
-  .header-container,
-  .download-btn {
-    position: relative;
-    z-index: 50;
   }
 
   .nav {
@@ -1612,14 +1581,12 @@ ul {
 
   .download-btn {
     margin-left: auto;
-    margin-bottom: 0;
-    z-index: 60;
-    pointer-events: auto;
+    margin-bottom: -50px;
   }
 
   .logo img {
     width: 56px;
-    margin-bottom: 0;
+    margin-bottom: -50px;
   }
 
   .intro {
@@ -1669,8 +1636,8 @@ ul {
     display: flex;
     justify-content: center;
     pointer-events: none;
-    margin-top: 50px;
-    margin-bottom: -450px;
+    margin-top: -50px;
+    margin-bottom: -250px;
   }
 
   .intro-image img {
@@ -1722,16 +1689,16 @@ ul {
 
   .phone-two,
   .phone-three {
-    width: 900px;
+    width: 650px;
   }
 
   .phone-two {
-    top: -100px;
-    left: -550px;
+    top: -10px;
+    left: -250px;
   }
 
   .phone-three {
-    top: 50px;
+    top: 150px;
     left: -350px;
   }
 
@@ -1782,17 +1749,16 @@ ul {
   }
 
   .bonus-phone-back {
-    width: 580px;
+    width: 480px;
     top: 70px;
-    margin-left: -100px;
-    margin-top: -20px;
+    right: 300px;
+    margin-right: -250px;
   }
 
   .bonus-phone-front {
-    width: 600px;
+    width: 500px;
     right: 120px;
     top: 0;
-    margin-top: -40px;
   }
 
   .events-slider-block {
@@ -1859,19 +1825,10 @@ ul {
     margin-bottom: 28px;
   }
 
-  .faq-container {
-    gap: 24px;
-  }
-
-  .faq-content {
-    max-width: 100%;
-  }
-
   .faq-question {
     min-height: 72px;
     padding: 18px 0;
     font-size: 22px;
-    gap: 12px;
   }
 
   .faq-icon {
@@ -1888,16 +1845,9 @@ ul {
     font-size: 15px;
   }
 
-  .faq-phone-wrap {
-    margin-top: 0;
-    margin-bottom: -80px;
-    padding: 0 16px;
-  }
-
   .faq-phone {
-    width: min(300px, 100%);
-    min-width: 0;
-    margin: 0;
+    width: 300px;
+    margin-bottom: -20px;
   }
 
   .contact-section {
@@ -2023,23 +1973,10 @@ ul {
     white-space: nowrap;
   }
 
-  .intro-image{
-    margin-top: 90px;
-    padding-bottom: 35px;
-    margin-left: 50px;
-  }
-
-  .about-app{
-    margin-top: 20px;
-    padding-top: 20px;
-  }
-
   .features-phones {
     min-height: 620px;
-    max-width: 150%;
-    width: 150%;
-    margin-top: 50px;
-    margin-left: -70px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .phone-two,
@@ -2061,6 +1998,7 @@ ul {
   .phone-three {
     width: 560px;
     left: -100px;
+    top: 200px;
     transform: rotate(9deg);
     z-index: 3;
   }
@@ -2089,9 +2027,9 @@ ul {
     min-height: 560px;
     width: 100%;
     max-width: 100%;
-    margin-top: 100px;
-    margin-bottom: -150px;
-    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 0;
     overflow: visible;
   }
 
@@ -2116,80 +2054,16 @@ ul {
     left: -250px;
     top: -100px;
   }
-
-  .faq-content{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .faq-phone-wrap {
-    margin: 0;
-    padding: 0 16px;
-  }
-
   .faq-phone {
-    width: min(240px, 100%);
-    min-width: 0;
-    margin: 0 auto 24px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 651px) {
-  .faq-content {
-    max-width: 100%;
+    width: 150px;
+    min-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 14px 0;
-  }
-
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
-  }
-
-  .logo {
-    position: relative;
-    z-index: 30;
-  }
-
-  .logo img {
-    width: 50px;
-    margin: 0;
-  }
-
-  .nav {
-    width: 100%;
-    margin: 0;
-    order: 2;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 0;
-  }
-
-  .menu-link {
-    font-size: 15px;
-  }
-
-  .download-btn {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 12px 16px;
-    text-align: center;
-    position: relative;
-    z-index: 30;
-  }
-
   .container {
     padding: 0 16px;
   }
@@ -2206,14 +2080,14 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    margin-top: 16px;
-    margin-left: 0;
+    margin-top: 50px;
+    margin-left: 20px;
   }
 
   .download-btn {
     width: 100%;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 50px;
     text-align: center;
   }
 
@@ -2239,9 +2113,9 @@ ul {
 
   .intro-image img {
     min-width: 150%;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 150px;
   }
 
   .features-phones {
@@ -2332,36 +2206,17 @@ ul {
     margin-top: 18px;
   }
 
- .faq-content{
-  width: 100%;
-  max-width: 100%;
- }
-
-  .faq-question {
-    font-size: 18px;
-    line-height: 1.25;
-    align-items: flex-start;
-  }
-
-  .faq-answer p {
-    font-size: 14px;
-    line-height: 1.45;
-  }
-  
   .faq-phone {
-  width: 150px;
-  min-width: 150%;
-  margin-top: -100px;
-  margin-bottom: -200px;
-  margin-left: -250px;
-}
+    width: 150px;
+    min-width: 150%;
+    margin-top: 50px;
+    margin-bottom: -20px;
+  }
 
   .faq-phone-wrap {
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    margin: 0;
-    padding: 0 16px;
+    overflow: visible;
   }
 
   .contact-card {
@@ -2389,10 +2244,6 @@ ul {
     font-size: 16px;
   }
 
-  .footer-nav{
-    margin-top: 20px;
-  }
-
   .social-link img {
     width: 24px;
     height: 24px;
@@ -2401,10 +2252,6 @@ ul {
   .store-link img {
     height: 36px;
   }
-}
-
-@media (max-width: 480px) {
-  
 }
 
 /* 
